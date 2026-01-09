@@ -7,225 +7,119 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        grey08: '#141414',
-                        grey10: '#1A1A1A',
-                        grey15: '#262626',
-                        grey30: '#4D4D4D',
-                        grey40: '#666666',
-                        grey60: '#999999',
-                        purple60: '#703BF7',
-                        absoluteWhite: '#FFFFFF',
-                    },
-                    fontFamily: { sans: ['Urbanist', 'sans-serif'] },
-                    maxWidth: {
-                        'desktop': '1440px',
-                    },
-                    spacing: {
-                        '80px': '80px',
-                    },
-                    backgroundImage: {
-                        'hero-gradient': 'linear-gradient(238.21deg, #2A213F 8.76%, rgba(25, 25, 25, 0) 50.09%)',
-                    }
-                }
-            }
-        }
+        tailwind.config={theme:{extend:{colors:{grey08:'#141414',grey10:'#1A1A1A',grey15:'#262626',grey30:'#4D4D4D',grey40:'#666666',grey60:'#999999',purple60:'#703BF7',absoluteWhite:'#FFFFFF'},fontFamily:{sans:['Urbanist','sans-serif']},maxWidth:{'desktop':'1920px'},spacing:{'80px':'80px'},backgroundImage:{'hero-gradient':'linear-gradient(238.21deg, #2A213F 8.76%, rgba(25, 25, 25, 0) 50.09%)'}}}}
     </script>
     <style type="text/tailwindcss">
-        @layer components {
-            .wrapper { 
-                @apply max-w-desktop mx-auto px-4 md:px-[80px] box-border; 
-            }
-            .btn { 
-                @apply flex flex-row justify-center items-center px-[20px] py-[14px] gap-[8px] rounded-[8px] text-[14px] font-medium leading-[150%]; 
-            }
-            .btn-outline { 
-                @apply btn bg-grey08 border border-grey15 text-absoluteWhite; 
-            }
-            .btn-primary { 
-                @apply btn bg-purple60 text-absoluteWhite shadow-none; 
-            }
-            .card-base {
-                @apply bg-grey10 border border-grey15 rounded-[10px] box-border;
-            }
-            .feature-card { 
-                @apply bg-grey10 border border-grey15 rounded-[10px] p-[16px] md:p-[30px] flex flex-col items-center md:items-start gap-[16px] relative overflow-hidden; 
-            }
-            .prop-card {
-                @apply bg-grey08 border border-grey15 rounded-[12px] p-[20px] md:p-[30px] flex flex-col gap-[20px];
-            }
-            .prop-badge {
-                @apply px-[14px] py-[6px] bg-grey10 border border-grey15 rounded-[28px] text-[14px] text-absoluteWhite flex items-center gap-[6px];
-            }
-            .star-box {
-                @apply w-[38px] h-[36px] bg-grey10 border border-grey15 rounded-[100px] flex items-center justify-center flex-none;
-            }
-            .footer-col h5 { 
-                @apply text-grey60 font-medium text-[18px] leading-[133%] mb-[24px]; 
-            }
-            .footer-col ul li a { 
-                @apply text-[16px] font-medium leading-[150%] text-absoluteWhite block mb-[16px]; 
-            }
-            .social-btn {
-                @apply w-[40px] h-[40px] bg-grey08 rounded-[58px] flex items-center justify-center text-absoluteWhite border border-transparent;
-            }
-        }
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #141414; }
-        ::-webkit-scrollbar-thumb { background: #262626; border-radius: 4px; }
+        @layer components{.wrapper{@apply max-w-desktop mx-auto px-4 md:px-[40px] box-border;}.wrapper-full{@apply max-w-desktop mx-auto box-border w-full;}.btn{@apply flex flex-row justify-center items-center px-[20px] py-[14px] gap-[8px] rounded-[8px] text-[14px] font-medium leading-[150%];}.btn-outline{@apply btn bg-grey08 border border-grey15 text-absoluteWhite;}.btn-primary{@apply btn bg-purple60 text-absoluteWhite shadow-none;}.card-base{@apply bg-grey10 border border-grey15 rounded-[10px] box-border;}.feature-card{@apply bg-grey10 border border-grey15 rounded-[10px] p-[16px] md:p-[30px] flex flex-col items-center md:items-start gap-[16px] relative overflow-hidden;}.prop-card{@apply bg-grey08 border border-grey15 rounded-[12px] p-[20px] md:p-[30px] flex flex-col gap-[20px] h-auto;}.prop-badge{@apply px-[14px] py-[6px] bg-grey10 border border-grey15 rounded-[28px] text-[14px] text-absoluteWhite flex items-center gap-[6px];}.star-box{@apply w-[38px] h-[36px] bg-grey10 border border-grey15 rounded-[100px] flex items-center justify-center flex-none;}.footer-col h5{@apply text-grey60 font-medium text-[18px] leading-[133%] mb-[24px];}.footer-col ul li a{@apply text-[16px] font-medium leading-[150%] text-absoluteWhite block mb-[16px];}.social-btn{@apply w-[40px] h-[40px] bg-grey08 rounded-[58px] flex items-center justify-center text-absoluteWhite border border-transparent;}}::-webkit-scrollbar{width:8px;}::-webkit-scrollbar-track{background:#141414;}::-webkit-scrollbar-thumb{background:#262626;border-radius:4px;}
     </style>
 </head>
 <body class="bg-grey08 text-absoluteWhite font-sans antialiased relative w-full overflow-x-hidden">
-
     <header class="w-full relative z-50">
         <div class="bg-grey10 bg-[url('bg1.png')] bg-cover bg-center border-b border-grey15 relative z-50">
-            <div class="max-w-desktop mx-auto px-4 md:px-[80px] py-[14px] flex justify-center items-center gap-[6px] relative h-full min-h-[49px]">
+            <div class="wrapper py-[8px] flex justify-center items-center gap-[6px] relative h-full">
                 <span class="truncate text-[14px] font-medium leading-[150%]">✨ Discover Your Dream Property with Estatein</span>
                 <a href="#" class="underline text-[14px] font-medium leading-[150%]">Learn More</a>
-                <button class="absolute right-[20px] md:right-[32px] w-[26px] h-[26px] bg-white/10 rounded-full flex items-center justify-center">
-                    <svg width="10" height="10" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M13 1L1 13M1 1L13 13" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
+                <button class="absolute right-4 md:right-[30px] w-[26px] h-[26px] bg-white/10 rounded-full flex items-center justify-center"><img src="x.png"></button>
             </div>
         </div>
-
         <div class="bg-grey10 border-b border-grey15">
-            <div class="max-w-desktop mx-auto px-4 md:px-[80px] py-[14px] h-[77px] flex justify-between items-center gap-[20px] lg:gap-[292px]">
+            <div class="wrapper py-[14px] h-[99px] flex justify-between items-center gap-[20px] lg:gap-[100px] xl:gap-[292px]">
                 <div class="flex items-center gap-2 flex-none">
                     <img src="logo.png" alt="Estatein Logo" class="w-[34px] h-[34px] object-contain">
                     <span class="text-[20px] font-semibold">Estatein</span>
                 </div>
-
                 <nav class="hidden lg:flex items-center gap-[24px]">
                     <a href="#" class="px-[20px] py-[12px] bg-grey08 border border-grey15 rounded-[8px] text-absoluteWhite text-[14px] font-medium">Home</a>
                     <a href="#" class="text-[14px] font-medium text-absoluteWhite">About Us</a>
                     <a href="#" class="text-[14px] font-medium text-absoluteWhite">Properties</a>
                     <a href="#" class="text-[14px] font-medium text-absoluteWhite">Services</a>
                 </nav>
-
-                <a href="#" class="hidden sm:flex bg-grey08 border border-grey15 px-[20px] py-[14px] rounded-[8px] text-[14px] font-medium">Contact Us</a>
-                
-                <button class="lg:hidden text-white"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+                <a href="#" class="hidden lg:flex bg-grey08 border border-grey15 px-[20px] py-[14px] rounded-[8px] text-[14px] font-medium">Contact Us</a>
+                <button class="lg:hidden text-white"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                 <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 7.875C3.5 7.39175 3.89175 7 4.375 7H23.625C24.1082 7 24.5 7.39175 24.5 7.875C24.5 8.35825 24.1082 8.75 23.625 8.75H4.375C3.89175 8.75 3.5 8.35825 3.5 7.875ZM3.5 14C3.5 13.5168 3.89175 13.125 4.375 13.125H23.625C24.1082 13.125 24.5 13.5168 24.5 14C24.5 14.4832 24.1082 14.875 23.625 14.875H4.375C3.89175 14.875 3.5 14.4832 3.5 14ZM13.125 20.125C13.125 19.6418 13.5168 19.25 14 19.25H23.625C24.1082 19.25 24.5 19.6418 24.5 20.125C24.5 20.6082 24.1082 21 23.625 21H14C13.5168 21 13.125 20.6082 13.125 20.125Z" fill="white"/>
+                 </svg>
+                </button>
             </div>
         </div>
     </header>
-
-    <section class="bg-grey08 relative overflow-hidden pb-0">
-        <div class="wrapper grid lg:grid-cols-2 gap-[60px] items-stretch relative">
-            <div class="py-[60px] space-y-[40px] relative z-10 order-2 lg:order-1 flex flex-col justify-center">
-                <div class="space-y-[20px]">
-                    
-                    <h1 class="text-[46px] md:text-[56px] font-semibold leading-[120%] tracking-tight text-absoluteWhite">
-                        Discover Your Dream Property with <span class="text-white">Estatein</span>
-                    </h1>
-                    
-                    <p class="text-grey60 text-[16px] leading-[150%] max-w-lg">
-                        Your journey to finding the perfect property begins here. Explore our listings to find the home that matches your dreams.
-                    </p>
+<section class="bg-grey08 relative overflow-hidden pb-0">
+    <div class="w-full max-w-desktop mx-auto grid lg:grid-cols-2 gap-[60px] items-stretch relative">
+        <div class="pl-4 md:pl-[40px] py-[60px] mt-[100px] lg:mt-0 space-y-[40px] relative z-10 order-2 lg:order-1 flex flex-col justify-center pr-4 lg:pr-0">
+            <div class="space-y-[20px]">
+                <h1 class="text-[46px] md:text-[56px] font-semibold leading-[120%] tracking-tight text-absoluteWhite">Discover Your Dream Property with <span class="text-white">Estatein</span></h1>
+                <p class="text-grey60 text-[16px] leading-[150%] max-w-lg">Your journey to finding the perfect property begins here. Explore our listings to find the home that matches your dreams.</p>
+            </div>
+            <div class="flex flex-wrap gap-[16px] w-full">
+                <button class="btn-outline w-full lg:w-auto py-[50px] lg:py-[14px]">Learn More</button>
+                <button class="btn-primary w-full lg:w-auto py-[50px] lg:py-[14px]">Browse Properties</button>
+            </div>
+            <div class="grid grid-cols-2 lg:grid-cols-3 gap-[16px]">
+                <div class="bg-grey10 border border-grey15 rounded-[10px] p-[16px] flex flex-col gap-[2px] items-center text-center lg:items-start lg:text-left">
+                    <h3 class="text-[30px] font-bold text-absoluteWhite">200+</h3>
+                    <p class="text-grey60 text-[16px]">Happy Customers</p>
                 </div>
-                
-                <div class="flex flex-wrap gap-[16px]">
-                    <button class="btn-outline w-full sm:w-auto">Learn More</button>
-                    <button class="btn-primary w-full sm:w-auto">Browse Properties</button>
+                <div class="bg-grey10 border border-grey15 rounded-[10px] p-[16px] flex flex-col gap-[2px] items-center text-center lg:items-start lg:text-left">
+                    <h3 class="text-[30px] font-bold text-absoluteWhite">10k+</h3>
+                    <p class="text-grey60 text-[16px]">Properties For Clients</p>
                 </div>
-
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-[16px]">
-                    <div class="bg-grey10 border border-grey15 rounded-[10px] p-[16px] flex flex-col gap-[2px]">
-                        <h3 class="text-[30px] font-bold text-absoluteWhite">200+</h3>
-                        <p class="text-grey60 text-[16px]">Happy Customers</p>
-                    </div>
-                    <div class="bg-grey10 border border-grey15 rounded-[10px] p-[16px] flex flex-col gap-[2px]">
-                        <h3 class="text-[30px] font-bold text-absoluteWhite">10k+</h3>
-                        <p class="text-grey60 text-[16px]">Properties For Clients</p>
-                    </div>
-                    <div class="bg-grey10 border border-grey15 rounded-[10px] p-[16px] flex flex-col gap-[2px] col-span-2 md:col-span-1">
-                        <h3 class="text-[30px] font-bold text-absoluteWhite">16+</h3>
-                        <p class="text-grey60 text-[16px]">Years of Experience</p>
-                    </div>
+                <div class="bg-grey10 border border-grey15 rounded-[10px] p-[16px] flex flex-col gap-[2px] col-span-2 lg:col-span-1 items-center text-center lg:items-start lg:text-left">
+                    <h3 class="text-[30px] font-bold text-absoluteWhite">16+</h3>
+                    <p class="text-grey60 text-[16px]">Years of Experience</p>
                 </div>
             </div>
-
-            <div class="relative order-1 lg:order-2 h-full flex justify-end">
-                <div class="relative w-full border-l border-grey15 overflow-hidden bg-grey10 h-full min-h-[500px] md:min-h-[auto]">
-                    <div class="absolute inset-0 bg-[url('bg.png')] bg-cover bg-center z-0"></div>
-                    <div class="absolute inset-0 bg-hero-gradient z-10 mix-blend-normal"></div>
-                    <img src="nha.png" class="w-full h-full object-cover relative z-20" alt="Building">
-                </div>
-            </div>
-
-            <div class="absolute left-[52%] top-[30%] -translate-x-1/2 -translate-y-1/2 z-40 hidden md:block">
-                 <img src="cr.png" alt="Discover Your Dream Property" class="w-[129px] h-[129px] object-contain">
-            </div>
-
         </div>
-    </section>
-
-    <section class="pb-[10px] bg-grey08">
-        <div class="wrapper">
-            <div class="bg-grey08 border border-grey15 p-[10px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[10px]">
-                
+        <div class="relative order-1 lg:order-2 h-auto lg:h-full flex justify-end mb-[80px] lg:mb-0">
+            <div class="relative z-10 w-auto mx-4 mt-[60px] border border-grey15 rounded-[12px] overflow-hidden bg-grey10 h-auto min-h-[350px] lg:h-full md:min-h-[500px] lg:border-l lg:border-y-0 lg:rounded-none lg:w-full lg:m-0">
+                <div class="absolute inset-0 bg-[url('bg.png')] bg-cover bg-center z-0"></div>
+                <div class="absolute inset-0 bg-hero-gradient z-10 mix-blend-normal"></div>
+                <img src="nha.png" class="w-full h-full object-cover relative z-20" alt="Building">
+            </div>
+            <div class="absolute z-20 left-4 bottom-[-120px] lg:left-[-65px] lg:top-[150px] lg:bottom-auto lg:-translate-y-1/2">
+                 <img src="cr.png" 
+                      alt="Discover Your Dream Property" 
+                      class="w-[30vw] h-[30vw] max-w-[300px] max-h-[300px] lg:w-[129px] lg:h-[129px] lg:max-w-none lg:max-h-none object-contain">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="pb-[10px] bg-grey08">
+        <div class="wrapper-full">
+            <div class="bg-grey08 border-8 border-grey15 p-[20px] grid grid-cols-2 lg:grid-cols-4 gap-[10px]">
                 <div class="feature-card">
-                    <div class="absolute top-[20px] right-[20px]">
-                        <img src="vtnext.png" alt="Next" class="w-[26px] h-[26px]">
-                    </div>
-                    <div class="w-[60px] h-[60px] rounded-full border border-purple60 bg-transparent flex items-center justify-center text-purple60">
-                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 01-1 1h2a1 1 0 01-1 1v4a1 1 0 001 1m-6 0h6"/></svg>
-                    </div>
+                    <div class="absolute top-[20px] right-[20px]"><img src="vtnext.png" alt="Next" class="w-[26px] h-[26px]"></div>
+                    <div class="w-[60px] h-[60px] rounded-full border border-purple60 bg-transparent flex items-center justify-center text-purple60"><img src="icon1.png"></div>
                     <h4 class="text-[16px] font-semibold text-absoluteWhite text-center md:text-left w-full">Find Your Dream Home</h4>
                 </div>
-
                 <div class="feature-card">
-                    <div class="absolute top-[20px] right-[20px]">
-                        <img src="vtnext.png" alt="Next" class="w-[26px] h-[26px]">
-                    </div>
-                    <div class="w-[60px] h-[60px] rounded-full border border-purple60 bg-transparent flex items-center justify-center text-purple60">
-                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                    </div>
+                    <div class="absolute top-[20px] right-[20px]"><img src="vtnext.png" alt="Next" class="w-[26px] h-[26px]"></div>
+                    <div class="w-[60px] h-[60px] rounded-full border border-purple60 bg-transparent flex items-center justify-center text-purple60"><img src="icon2.png"></div>
                     <h4 class="text-[16px] font-semibold text-absoluteWhite text-center md:text-left w-full">Unlock Property Value</h4>
                 </div>
-
                 <div class="feature-card">
-                    <div class="absolute top-[20px] right-[20px]">
-                        <img src="vtnext.png" alt="Next" class="w-[26px] h-[26px]">
-                    </div>
-                    <div class="w-[60px] h-[60px] rounded-full border border-purple60 bg-transparent flex items-center justify-center text-purple60">
-                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
-                    </div>
+                    <div class="absolute top-[20px] right-[20px]"><img src="vtnext.png" alt="Next" class="w-[26px] h-[26px]"></div>
+                    <div class="w-[60px] h-[60px] rounded-full border border-purple60 bg-transparent flex items-center justify-center text-purple60"><img src="icon3.png"></div>
                     <h4 class="text-[16px] font-semibold text-absoluteWhite text-center md:text-left w-full">Property Management</h4>
                 </div>
-
                 <div class="feature-card">
-                    <div class="absolute top-[20px] right-[20px]">
-                        <img src="vtnext.png" alt="Next" class="w-[26px] h-[26px]">
-                    </div>
-                    <div class="w-[60px] h-[60px] rounded-full border border-purple60 bg-transparent flex items-center justify-center text-purple60">
-                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
-                    </div>
+                    <div class="absolute top-[20px] right-[20px]"><img src="vtnext.png" alt="Next" class="w-[26px] h-[26px]"></div>
+                    <div class="w-[60px] h-[60px] rounded-full border border-purple60 bg-transparent flex items-center justify-center text-purple60"><img src="icon4.png"></div>
                     <h4 class="text-[16px] font-semibold text-absoluteWhite text-center md:text-left w-full">Smart Investments</h4>
                 </div>
             </div>
         </div>
     </section>
-
-    <section class="py-[60px] md:py-[80px]">
+    <section class="pt-[60px] pb-[30px] md:pt-[80px] md:pb-[40px]">
         <div class="wrapper">
             <div class="flex flex-col gap-[10px] mb-[60px]">
                 <h2 class="text-[38px] font-semibold text-absoluteWhite leading-[150%]">Featured Properties</h2>
                 <div class="flex flex-col md:flex-row justify-between items-end gap-4">
                     <p class="text-grey60 text-[16px] leading-[150%] max-w-3xl">Explore our handpicked selection of featured properties. Each listing offers a glimpse into exceptional homes and investments available through Estatein.</p>
-                    <button class="btn bg-grey10 border border-grey15 text-absoluteWhite">View All Properties</button>
+                    <button class="btn bg-grey10 border border-grey15 text-absoluteWhite hidden lg:block">View All Properties</button>
                 </div>
             </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-[20px]">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-[20px]">
                 <div class="prop-card">
-                    <div class="h-[255px] overflow-hidden rounded-[10px]">
-                        <img src="https://images.unsplash.com/photo-1600596542815-e328d4de4bf7?q=80&w=2000&auto=format&fit=crop" class="w-full h-full object-cover">
-                    </div>
+                    <div class="aspect-[4/3] overflow-hidden rounded-[10px] h-auto"><img src="nha1.png" class="w-full h-full object-cover"></div>
                     <div class="flex flex-col gap-[24px]">
                         <div class="flex flex-col gap-[4px]">
                             <h3 class="text-[20px] font-semibold text-absoluteWhite">Seaside Serenity Villa</h3>
@@ -234,7 +128,7 @@
                         <div class="flex flex-wrap gap-[6px]">
                             <span class="prop-badge"><img src="iconbed.png" alt="bed" class="w-5 h-5"> 4-Bed</span>
                             <span class="prop-badge"><img src="iconbath.png" alt="bath" class="w-5 h-5"> 3-Bath</span>
-                            <span class="prop-badge"><img src="iconvila.png" alt="villa" class="w-5 h-5"> Villa</span>
+                            <span class="prop-badge"><img src="iconvilla.png" alt="villa" class="w-5 h-5"> Villa</span>
                         </div>
                         <div class="flex justify-between items-center mt-auto">
                             <div><p class="text-grey60 text-[14px]">Price</p><p class="text-[20px] font-semibold text-absoluteWhite">$550,000</p></div>
@@ -242,11 +136,8 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="prop-card">
-                    <div class="h-[255px] overflow-hidden rounded-[10px]">
-                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=2000&auto=format&fit=crop" class="w-full h-full object-cover">
-                    </div>
+                <div class="prop-card hidden lg:flex">
+                    <div class="aspect-[4/3] overflow-hidden rounded-[10px] h-auto"><img src="nha2.png" class="w-full h-full object-cover"></div>
                     <div class="flex flex-col gap-[24px]">
                         <div class="flex flex-col gap-[4px]">
                             <h3 class="text-[20px] font-semibold text-absoluteWhite">Metropolitan Haven</h3>
@@ -255,7 +146,7 @@
                         <div class="flex flex-wrap gap-[6px]">
                             <span class="prop-badge"><img src="iconbed.png" alt="bed" class="w-5 h-5"> 2-Bed</span>
                             <span class="prop-badge"><img src="iconbath.png" alt="bath" class="w-5 h-5"> 2-Bath</span>
-                            <span class="prop-badge"><img src="iconvila.png" alt="villa" class="w-5 h-5"> Villa</span>
+                            <span class="prop-badge"><img src="iconvilla.png" alt="villa" class="w-5 h-5"> Villa</span>
                         </div>
                         <div class="flex justify-between items-center mt-auto">
                             <div><p class="text-grey60 text-[14px]">Price</p><p class="text-[20px] font-semibold text-absoluteWhite">$350,000</p></div>
@@ -263,11 +154,8 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="prop-card">
-                    <div class="h-[255px] overflow-hidden rounded-[10px]">
-                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2000&auto=format&fit=crop" class="w-full h-full object-cover">
-                    </div>
+                <div class="prop-card hidden lg:flex">
+                    <div class="aspect-[4/3] overflow-hidden rounded-[10px] h-auto"><img src="nha3.png" class="w-full h-full object-cover"></div>
                     <div class="flex flex-col gap-[24px]">
                         <div class="flex flex-col gap-[4px]">
                             <h3 class="text-[20px] font-semibold text-absoluteWhite">Rustic Retreat Cottage</h3>
@@ -276,7 +164,7 @@
                         <div class="flex flex-wrap gap-[6px]">
                             <span class="prop-badge"><img src="iconbed.png" alt="bed" class="w-5 h-5"> 3-Bed</span>
                             <span class="prop-badge"><img src="iconbath.png" alt="bath" class="w-5 h-5"> 2-Bath</span>
-                            <span class="prop-badge"><img src="iconvila.png" alt="villa" class="w-5 h-5"> Villa</span>
+                            <span class="prop-badge"><img src="iconvilla.png" alt="villa" class="w-5 h-5"> Villa</span>
                         </div>
                         <div class="flex justify-between items-center mt-auto">
                             <div><p class="text-grey60 text-[14px]">Price</p><p class="text-[20px] font-semibold text-absoluteWhite">$450,000</p></div>
@@ -285,30 +173,28 @@
                     </div>
                 </div>
             </div>
-            
-            <div class="mt-[20px] pt-[16px] border-t border-grey15 flex justify-between items-center">
-                <p class="text-absoluteWhite text-[16px] font-medium hidden md:block">01 of 10</p>
-                <div class="flex gap-[10px] ml-auto md:ml-0">
-                    <button class="w-[44px] h-[44px] rounded-[69px] border border-grey15 flex items-center justify-center"><svg class="w-6 h-6 text-grey30 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></button>
-                    <button class="w-[44px] h-[44px] rounded-[69px] border border-grey15 bg-grey10 flex items-center justify-center"><svg class="w-6 h-6 text-absoluteWhite" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></button>
+            <div class="mt-[20px] pt-[16px] border-t border-grey15 flex flex-row justify-between items-center gap-4">
+                <button class="btn bg-grey10 border border-grey15 text-absoluteWhite lg:hidden w-auto">View All Properties</button>
+                <p class="hidden lg:block text-absoluteWhite text-[16px] font-medium">01 of 60</p>
+                <div class="flex gap-[10px] items-center ml-auto lg:ml-0">
+                    <button class="w-[44px] h-[44px] rounded-[69px] border border-grey15 flex items-center justify-center"><img src="vtleft.png" class="w-4 h-4"></button>
+                    <p class="block lg:hidden text-absoluteWhite text-[16px] font-medium">01 of 60</p>
+                    <button class="w-[44px] h-[44px] rounded-[69px] border border-grey15 bg-grey10 flex items-center justify-center"><img src="vtright.png" class="w-4 h-4"></button>
                 </div>
             </div>
         </div>
     </section>
-
-    <section class="py-[60px] md:py-[80px] bg-grey08">
+    <section class="pt-[60px] pb-[30px] md:pt-[80px] md:pb-[40px] bg-grey08">
         <div class="wrapper">
-            <div class="flex flex-col gap-[60px]">
-                
-                <div class="flex flex-col gap-[10px]">
+            <div>
+                <div class="flex flex-col gap-[10px] mb-[60px]">
                     <h2 class="text-[38px] font-semibold text-absoluteWhite leading-[150%]">What Our Clients Say</h2>
                     <div class="flex flex-col md:flex-row justify-between items-end gap-4">
                         <p class="text-grey60 text-[16px] leading-[150%] max-w-3xl">Read the success stories and heartfelt testimonials from our valued clients. Discover why they chose Estatein for their real estate needs.</p>
-                        <button class="btn bg-grey10 border border-grey15 text-absoluteWhite">View All Testimonials</button>
+                        <button class="btn bg-grey10 border border-grey15 text-absoluteWhite hidden lg:block">View All Testimonials</button>
                     </div>
                 </div>
-
-                <div class="grid md:grid-cols-3 gap-[20px]">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-[20px]">
                     <div class="card-base p-[40px] flex flex-col gap-[30px]">
                         <div class="flex gap-[10px]">
                             <div class="star-box"><img src="star.png" alt="star" class="w-5 h-5"></div>
@@ -319,15 +205,14 @@
                         </div>
                         <div class="flex flex-col gap-[10px]">
                             <h4 class="text-[20px] font-semibold text-absoluteWhite">Exceptional Service!</h4>
-                            <p class="text-absoluteWhite text-[16px] leading-[150%]">"Our experience with Estatein was outstanding. Their team's dedication made finding our dream home a breeze."</p>
+                            <p class="text-absoluteWhite text-[16px] leading-[150%]">"Our experience with Estatein was outstanding. Their team's dedication and professionalism made finding our dream home a breeze. Highly recommended!"</p>
                         </div>
                         <div class="flex items-center gap-[10px] mt-auto">
-                            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=100&h=100" class="w-[50px] h-[50px] rounded-full object-cover">
+                            <img src="ava1.png" class="w-[50px] h-[50px] rounded-full object-cover">
                             <div><p class="text-[18px] font-medium text-absoluteWhite">Wade Warren</p><p class="text-grey60 text-[16px]">USA, California</p></div>
                         </div>
                     </div>
-                    
-                    <div class="card-base p-[40px] flex flex-col gap-[30px]">
+                    <div class="card-base p-[40px] flex flex-col gap-[30px] hidden lg:flex">
                         <div class="flex gap-[10px]">
                             <div class="star-box"><img src="star.png" alt="star" class="w-5 h-5"></div>
                             <div class="star-box"><img src="star.png" alt="star" class="w-5 h-5"></div>
@@ -337,15 +222,14 @@
                         </div>
                         <div class="flex flex-col gap-[10px]">
                             <h4 class="text-[20px] font-semibold text-absoluteWhite">Efficient and Reliable</h4>
-                            <p class="text-absoluteWhite text-[16px] leading-[150%]">"Estatein provided us with top-notch service. They helped us sell our property quickly and at a great price."</p>
+                            <p class="text-absoluteWhite text-[16px] leading-[150%]">"Estatein provided us with top-notch service. They helped us sell our property quickly and at a great price. We couldn't be happier with the results."</p>
                         </div>
                         <div class="flex items-center gap-[10px] mt-auto">
-                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&h=100" class="w-[50px] h-[50px] rounded-full object-cover">
+                            <img src="ava2.png" class="w-[50px] h-[50px] rounded-full object-cover">
                             <div><p class="text-[18px] font-medium text-absoluteWhite">Emelie Thomson</p><p class="text-grey60 text-[16px]">USA, Florida</p></div>
                         </div>
                     </div>
-
-                    <div class="card-base p-[40px] flex flex-col gap-[30px]">
+                    <div class="card-base p-[40px] flex flex-col gap-[30px] hidden lg:flex">
                         <div class="flex gap-[10px]">
                             <div class="star-box"><img src="star.png" alt="star" class="w-5 h-5"></div>
                             <div class="star-box"><img src="star.png" alt="star" class="w-5 h-5"></div>
@@ -355,58 +239,76 @@
                         </div>
                         <div class="flex flex-col gap-[10px]">
                             <h4 class="text-[20px] font-semibold text-absoluteWhite">Trusted Advisors</h4>
-                            <p class="text-absoluteWhite text-[16px] leading-[150%]">"Their market knowledge is immense. They guided us through every step and negotiation."</p>
+                            <p class="text-absoluteWhite text-[16px] leading-[150%]">"The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!"</p>
                         </div>
                         <div class="flex items-center gap-[10px] mt-auto">
-                            <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&w=100&h=100" class="w-[50px] h-[50px] rounded-full object-cover">
+                            <img src="ava3.png" class="w-[50px] h-[50px] rounded-full object-cover">
                             <div><p class="text-[18px] font-medium text-absoluteWhite">John Mans</p><p class="text-grey60 text-[16px]">USA, Nevada</p></div>
                         </div>
+                    </div>
+                </div>
+                <div class="mt-[20px] pt-[16px] border-t border-grey15 flex flex-row justify-between items-center gap-4">
+                    <button class="btn bg-grey10 border border-grey15 text-absoluteWhite lg:hidden w-auto">View All Testimonials</button>
+                    <p class="hidden lg:block text-absoluteWhite text-[16px] font-medium">01 of 60</p>
+                    <div class="flex gap-[10px] items-center ml-auto lg:ml-0">
+                        <button class="w-[44px] h-[44px] rounded-[69px] border border-grey15 flex items-center justify-center"><img src="vtleft.png" class="w-4 h-4"></button>
+                        <p class="block lg:hidden text-absoluteWhite text-[16px] font-medium">01 of 60</p>
+                        <button class="w-[44px] h-[44px] rounded-[69px] border border-grey15 bg-grey10 flex items-center justify-center"><img src="vtright.png" class="w-4 h-4"></button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-[60px] md:py-[80px]">
+    <section class="pt-[60px] pb-[30px] md:pt-[80px] md:pb-[40px]">
         <div class="wrapper">
             <div class="flex flex-col gap-[10px] mb-[60px]">
                 <h2 class="text-[38px] font-semibold text-absoluteWhite leading-[150%]">Frequently Asked Questions</h2>
                 <div class="flex flex-col md:flex-row justify-between items-end gap-4">
-                    <p class="text-grey60 text-[16px] leading-[150%] max-w-3xl">Find answers to common questions about Estatein's services, property listings, and the real estate process.</p>
-                    <button class="btn bg-grey10 border border-grey15 text-absoluteWhite">View All FAQ’s</button>
+                    <p class="text-grey60 text-[16px] leading-[150%] max-w-3xl">Find answers to common questions about Estatein's services, property listings, and the real estate process. We're here to provide clarity and assist you every step of the way.</p>
+                    <button class="btn bg-grey10 border border-grey15 text-absoluteWhite hidden lg:block">View All FAQ’s</button>
                 </div>
             </div>
-
-            <div class="grid md:grid-cols-3 gap-[20px] mb-[60px]">
-                <div class="bg-grey08 border border-grey15 rounded-[10px] p-[30px] md:p-[40px] flex flex-col gap-[24px]">
-                    <h4 class="text-[20px] font-semibold text-absoluteWhite">How do I search for properties?</h4>
-                    <p class="text-grey60 text-[16px] leading-[150%]">Learn how to use our user-friendly search tools.</p>
-                    <button class="btn bg-grey10 border border-grey15 text-absoluteWhite w-fit">Read More</button>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-[20px]">
+                <div class="bg-grey08 border border-grey15 rounded-[10px] p-[30px] md:p-[40px] flex flex-col gap-[24px] h-full">
+                    <h4 class="text-[20px] font-semibold text-absoluteWhite">How do I search for properties on Estatein?</h4>
+                    <p class="text-grey60 text-[16px] leading-[150%]">Learn how to use our user-friendly search tools to find properties that match your criteria.</p>
+                    <button class="btn bg-grey10 border border-grey15 text-absoluteWhite w-fit mt-auto">Read More</button>
                 </div>
-                <div class="bg-grey08 border border-grey15 rounded-[10px] p-[30px] md:p-[40px] flex flex-col gap-[24px]">
-                    <h4 class="text-[20px] font-semibold text-absoluteWhite">What documents do I need?</h4>
-                    <p class="text-grey60 text-[16px] leading-[150%]">Find out all the necessary documentation required.</p>
-                    <button class="btn bg-grey10 border border-grey15 text-absoluteWhite w-fit">Read More</button>
+                <div class="bg-grey08 border border-grey15 rounded-[10px] p-[30px] md:p-[40px] flex flex-col gap-[24px] h-full hidden lg:flex">
+                    <h4 class="text-[20px] font-semibold text-absoluteWhite">What documents do I need to sell my property through Estatein?</h4>
+                    <p class="text-grey60 text-[16px] leading-[150%]">Find out about the necessary documentation for listing your property with us.</p>
+                    <button class="btn bg-grey10 border border-grey15 text-absoluteWhite w-fit mt-auto">Read More</button>
                 </div>
-                <div class="bg-grey08 border border-grey15 rounded-[10px] p-[30px] md:p-[40px] flex flex-col gap-[24px]">
-                    <h4 class="text-[20px] font-semibold text-absoluteWhite">How to contact an agent?</h4>
-                    <p class="text-grey60 text-[16px] leading-[150%]">Discover ways to get in touch with our agents.</p>
-                    <button class="btn bg-grey10 border border-grey15 text-absoluteWhite w-fit">Read More</button>
+                <div class="bg-grey08 border border-grey15 rounded-[10px] p-[30px] md:p-[40px] flex flex-col gap-[24px] h-full hidden lg:flex">
+                    <h4 class="text-[20px] font-semibold text-absoluteWhite">How can I contact an Estatein agent?</h4>
+                    <p class="text-grey60 text-[16px] leading-[150%]">Discover the different ways you can get in touch with our experienced agents.</p>
+                    <button class="btn bg-grey10 border border-grey15 text-absoluteWhite w-fit mt-auto">Read More</button>
                 </div>
             </div>
-
-            <div class="relative w-full border-y border-grey15 py-[60px] px-[20px] md:px-[80px] flex flex-col md:flex-row items-center justify-between gap-[40px] bg-grey08 overflow-hidden">
-                <div class="absolute inset-0 bg-hero-gradient opacity-20 pointer-events-none"></div>
-                
-                <div class="relative z-10 space-y-[10px]">
-                    <h2 class="text-[38px] font-semibold text-absoluteWhite leading-[150%]">Start Your Real Estate Journey Today</h2>
-                    <p class="text-grey60 text-[16px] leading-[150%] max-w-3xl">Your dream property is just a click away.</p>
+            <div class="mt-[20px] pt-[16px] border-t border-grey15 flex flex-row justify-between items-center gap-4">
+                <button class="btn bg-grey10 border border-grey15 text-absoluteWhite lg:hidden w-auto">View All FAQ’s</button>
+                <p class="hidden lg:block text-absoluteWhite text-[16px] font-medium">01 of 60</p>
+                <div class="flex gap-[10px] items-center ml-auto lg:ml-0">
+                    <button class="w-[44px] h-[44px] rounded-[69px] border border-grey15 flex items-center justify-center"><img src="vtleft.png" class="w-4 h-4"></button>
+                    <p class="block lg:hidden text-absoluteWhite text-[16px] font-medium">01 of 60</p>
+                    <button class="w-[44px] h-[44px] rounded-[69px] border border-grey15 bg-grey10 flex items-center justify-center"><img src="vtright.png" class="w-4 h-4"></button>
                 </div>
-                <button class="relative z-10 btn bg-purple60 text-absoluteWhite">Explore Properties</button>
             </div>
         </div>
     </section>
 
+    <section class="border-y border-grey15 bg-grey08 mt-[40px]">
+        <div class="wrapper relative py-[60px] flex flex-col lg:flex-row items-center justify-between gap-[30px] lg:gap-[40px] overflow-hidden">
+            <img src="pic1.png" alt="" class="absolute left-0 bottom-0 z-0 pointer-events-none w-60 md:w-64 h-auto">
+            <img src="pic2.png" alt="" class="absolute right-0 bottom-0 z-0 pointer-events-none w-60 md:w-64 h-auto">
+            <div class="relative z-10 space-y-[10px] w-full text-center lg:text-left">
+                <h2 class="text-[38px] font-semibold text-absoluteWhite leading-[150%]">Start Your Real Estate Journey Today</h2>
+                <p class="text-grey60 text-[16px] leading-[150%] max-w-3x2 mx-auto lg:mx-0">Your dream property is just a click away. Whether you're looking for a new home, a strategic investment, or expert real estate advice, Estatein is here to assist you every step of the way. Take the first step towards your real estate goals and explore our available properties or get in touch with our team for personalized assistance.</p>
+            </div>
+            <button class="relative z-10 btn bg-purple60 text-absoluteWhite w-full lg:w-auto flex-none">Explore Properties</button>
+        </div>
+    </section>
     <footer class="bg-grey08 pt-[80px] border-t border-grey15">
         <div class="wrapper mb-[80px]">
             <div class="grid grid-cols-1 lg:grid-cols-6 gap-[80px]">
@@ -425,7 +327,6 @@
                         </button>
                     </div>
                 </div>
-
                 <div class="lg:col-span-4 grid grid-cols-2 md:grid-cols-5 gap-[50px] footer-col">
                     <div>
                         <h5>Home</h5>
@@ -450,7 +351,6 @@
                 </div>
             </div>
         </div>
-
         <div class="bg-grey10 w-full border-t border-grey15">
             <div class="wrapper flex flex-col md:flex-row justify-between items-center py-[12px] h-auto md:h-[68px]">
                 <div class="flex flex-col md:flex-row gap-[20px] mb-4 md:mb-0">
